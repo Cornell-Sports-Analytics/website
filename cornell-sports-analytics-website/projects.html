@@ -1,0 +1,66 @@
+---
+layout: default
+title: Past projects
+permalink: /projects/
+description: Every project Cornell Sports Analytics has completed, organized by year, with the full write-up as a PDF.
+---
+{%- comment -%}
+  This page builds itself from the PDFs saved in projects/<year>/.
+  Nothing here needs editing when a project is added.
+{%- endcomment -%}
+{%- assign candidates = site.static_files | where_exp: "f", "f.path contains '/projects/'" | sort_natural: "path" -%}
+{%- assign years = "" | split: "," -%}
+{%- for f in candidates -%}
+  {%- assign ext = f.extname | downcase -%}
+  {%- assign parts = f.path | split: "/" -%}
+  {%- if ext == ".pdf" and parts.size == 4 and parts[1] == "projects" -%}
+    {%- assign years = years | push: parts[2] -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign years = years | uniq | sort | reverse -%}
+
+<section class="page-head wrap">
+  <h1>Past projects</h1>
+  <p class="lede">Everything the group has finished, newest first. Each project links to its full write-up as a PDF.</p>
+  {%- if years.size > 1 %}
+  <nav class="year-nav" aria-label="Jump to a year">
+    <ul>
+      {%- for y in years %}
+      <li><a href="#year-{{ y }}">{{ y }}</a></li>
+      {%- endfor %}
+    </ul>
+  </nav>
+  {%- endif %}
+</section>
+
+<div class="wrap archive">
+  {%- if years.size == 0 %}
+  <p class="empty">Our first projects will be posted here.</p>
+  {%- endif %}
+  {%- for y in years %}
+  <section class="year" id="year-{{ y }}" aria-labelledby="label-{{ y }}">
+    <h2 class="year-label" id="label-{{ y }}">{{ y }}</h2>
+    <ul class="entries">
+      {%- for f in candidates -%}
+        {%- assign ext = f.extname | downcase -%}
+        {%- assign parts = f.path | split: "/" -%}
+        {%- if ext == ".pdf" and parts.size == 4 and parts[1] == "projects" and parts[2] == y -%}
+          {%- assign meta = site.data.projects[f.name] %}
+      <li class="entry">
+        <div class="entry-body">
+          <h3><a href="{{ f.path | relative_url | uri_escape }}">{% if meta.title %}{{ meta.title }}{% else %}{{ f.basename | replace: "-", " " | replace: "_", " " }}{% endif %}<span class="visually-hidden"> (PDF)</span></a></h3>
+          {%- if meta.authors %}
+          <p class="entry-authors">{{ meta.authors }}</p>
+          {%- endif %}
+          {%- if meta.summary %}
+          <p class="entry-summary">{{ meta.summary }}</p>
+          {%- endif %}
+        </div>
+        <span class="pdf-tag" aria-hidden="true">PDF</span>
+      </li>
+        {%- endif -%}
+      {%- endfor %}
+    </ul>
+  </section>
+  {%- endfor %}
+</div>
