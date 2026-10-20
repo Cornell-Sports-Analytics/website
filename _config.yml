@@ -1,0 +1,30 @@
+# Cornell Sports Analytics website settings.
+# Edit the values below; everything else on the site reads from here.
+
+title: Cornell Sports Analytics
+tagline: Cornell students who argue about sports with data
+description: Cornell Sports Analytics is a student group that builds models, tests hot takes, and publishes what we find.
+
+# Keep url as the custom domain. Keep baseurl empty.
+url: "https://cornellsportsanalytics.com"
+baseurl: ""
+
+# Shown on the contact page and in the footer.
+# Leave a line empty ("") to hide it.
+contact_email: ""
+social:
+  github: "https://github.com/Cornell-Sports-Analytics"
+  instagram: ""
+  linkedin: ""
+
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Files in the repo that should not be published as part of the site.
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

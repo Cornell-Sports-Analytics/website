@@ -1,0 +1,7 @@
+# Links in the top navigation bar, in order.
+- title: About us
+  url: /about/
+- title: Past projects
+  url: /projects/
+- title: Contact us
+  url: /contact/

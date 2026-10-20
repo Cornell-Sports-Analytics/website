@@ -1,0 +1,20 @@
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p class="footer-name">Cornell Sports Analytics</p>
+    <ul class="footer-links">
+      {%- unless site.contact_email == blank %}
+      <li><a href="mailto:{{ site.contact_email }}">Email</a></li>
+      {%- endunless %}
+      {%- unless site.social.github == blank %}
+      <li><a href="{{ site.social.github }}">GitHub</a></li>
+      {%- endunless %}
+      {%- unless site.social.instagram == blank %}
+      <li><a href="{{ site.social.instagram }}">Instagram</a></li>
+      {%- endunless %}
+      {%- unless site.social.linkedin == blank %}
+      <li><a href="{{ site.social.linkedin }}">LinkedIn</a></li>
+      {%- endunless %}
+    </ul>
+    <p class="footer-copy">&copy; {{ site.time | date: "%Y" }} Cornell Sports Analytics</p>
+  </div>
+</footer>
