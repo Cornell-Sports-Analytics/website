@@ -1,8 +1,8 @@
 # Optional details for the Past projects page.
 #
 # A PDF shows up on the page as soon as it is saved in projects/<year>/, even with no entry here.
-# Without an entry, its title is made from the file name. Add an entry to give it a proper
-# title, the authors, and a one-sentence summary.
+# Without an entry, its title is made from the file name. Add an entry to give it a title,
+# the authors, and a one-sentence summary.
 #
 # The key must match the PDF's file name exactly. Example:
 #
@@ -10,3 +10,31 @@
 #   title: Predicting NBA draft picks from college tracking data
 #   authors: Firstname Lastname, Firstname Lastname
 #   summary: We compare three models for ranking prospects and test them on ten years of drafts.
+
+"CSA Project - Brendan Annulis.pdf":
+  title: CSA Project
+  authors: Brendan Annulis
+
+"CSA Project - Charles Aftel.pdf":
+  title: CSA Project
+  authors: Charles Aftel
+
+"CSA Project - Duncan Park and Sameer Nathawat.pdf":
+  title: CSA Project
+  authors: Duncan Park and Sameer Nathawat
+
+"CSA Project - Evan Deutsch.pdf":
+  title: CSA Project
+  authors: Evan Deutsch
+
+"CSA Project - Jack Neckritz.pdf":
+  title: CSA Project
+  authors: Jack Neckritz
+
+"CSA Project - Jordan Weiss.pdf":
+  title: CSA Project
+  authors: Jordan Weiss
+
+"CSA Project - Logan Spano.pdf":
+  title: CSA Project
+  authors: Logan Spano
