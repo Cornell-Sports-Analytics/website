@@ -26,7 +26,8 @@ description: Every project Cornell Sports Analytics has completed, organized by 
   <nav class="year-nav" aria-label="Jump to a year">
     <ul>
       {%- for y in years %}
-      <li><a href="#year-{{ y }}">{{ y }}</a></li>
+      {%- assign year_id = y | slugify %}
+      <li><a href="#year-{{ year_id }}">{{ y }}</a></li>
       {%- endfor %}
     </ul>
   </nav>
@@ -38,8 +39,9 @@ description: Every project Cornell Sports Analytics has completed, organized by 
   <p class="empty">Our first projects will be posted here.</p>
   {%- endif %}
   {%- for y in years %}
-  <section class="year" id="year-{{ y }}" aria-labelledby="label-{{ y }}">
-    <h2 class="year-label" id="label-{{ y }}">{{ y }}</h2>
+  {%- assign year_id = y | slugify %}
+  <section class="year" id="year-{{ year_id }}" aria-labelledby="label-{{ year_id }}">
+    <h2 class="year-label" id="label-{{ year_id }}">{{ y }}</h2>
     <ul class="entries">
       {%- for f in candidates -%}
         {%- assign ext = f.extname | downcase -%}

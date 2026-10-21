@@ -1,6 +1,6 @@
 # Optional details for the Past projects page.
 #
-# A PDF shows up on the page as soon as it is saved in projects/<year>/, even with no entry here.
+# A PDF shows up on the page under its folder name as soon as it is saved in projects/<year>/.
 # Without an entry, its title is made from the file name. Add an entry to give it a title,
 # the authors, and a one-sentence summary.
 #
@@ -12,29 +12,29 @@
 #   summary: We compare three models for ranking prospects and test them on ten years of drafts.
 
 "CSA Project - Brendan Annulis.pdf":
-  title: CSA Project
+  title: Bust to Super Bowl Champion: What Causes the QB Career Resurgence?
   authors: Brendan Annulis
 
 "CSA Project - Charles Aftel.pdf":
-  title: CSA Project
+  title: Home Field Advantage in the NFL
   authors: Charles Aftel
 
 "CSA Project - Duncan Park and Sameer Nathawat.pdf":
-  title: CSA Project
+  title: Projecting Wide Receiver Tiers Using Machine Learning
   authors: Duncan Park and Sameer Nathawat
 
 "CSA Project - Evan Deutsch.pdf":
-  title: CSA Project
+  title: Could Team Canada Have Beaten Team USA With Better Roster Selection?
   authors: Evan Deutsch
 
 "CSA Project - Jack Neckritz.pdf":
-  title: CSA Project
+  title: Hockey Faceoff Analysis and Scouting Framework
   authors: Jack Neckritz
 
 "CSA Project - Jordan Weiss.pdf":
-  title: CSA Project
+  title: Using the Black Scholes Model to Predict the 2026 Masters Tournament
   authors: Jordan Weiss
 
 "CSA Project - Logan Spano.pdf":
-  title: CSA Project
+  title: Predicting 2026 MLB Breakouts
   authors: Logan Spano

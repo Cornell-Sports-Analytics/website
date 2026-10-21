@@ -8,10 +8,10 @@ Everything below can be done in the GitHub web interface. You do not need to ins
 
 1. Open the `projects` folder in this repository.
 2. Click **Add file > Upload files**.
-3. Drag in a folder named for the year (for example `2027`) that contains the PDF. If the year folder already exists, open it first and drag in just the PDF.
+3. Drag in a folder named for the season and year (for example `Fall 2027`) that contains the PDF. If that folder already exists, open it first and drag in just the PDF.
 4. Click **Commit changes**.
 
-After about a minute the PDF appears on the Past projects page under its year. The page sorts itself, so nothing else needs editing.
+After about a minute the PDF appears on the Past Projects page under the folder name. The page sorts itself, so nothing else needs editing.
 
 Name PDFs with lowercase words and dashes, for example `nba-draft-model.pdf`. With no extra details, the page shows the file name as the title.
 
