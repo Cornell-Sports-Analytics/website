@@ -10,12 +10,15 @@
 #   title: Predicting NBA draft picks from college tracking data
 #   authors: Firstname Lastname, Firstname Lastname
 #   summary: We compare three models for ranking prospects and test them on ten years of drafts.
+"CSA Project - Alec DiConza":
+  title: Attendance and Salary in Baseball
+  authors: Alec DiConza
 
 "CSA Project - Charles Aftel (Fall25).pdf":
   title: Home Field Advantage in the NFL
   authors: Charles Aftel
 
-"CSA Proejct - Daniel Decker and Silas Dorsky.pdf":
+"CSA Project - Daniel Decker and Silas Dorsky.pdf":
   title: Analyzing the Luckiest and Unluckiest Hitters in the MLB
   authors: Daniel Decker and Silas Dorsky
 
@@ -23,7 +26,7 @@
   title: Do Teams Pay for What Actually Predicts Performance?
   authors: Evan Deutsch and Jack Neckritz
 
-"Football Group 1 Presentation F25.pdf":
+"CSA Project - Joel Hughes, Brendan Annulis, and Luke McGrath.pdf":
   title: Drafting QBs - Boom or Bust
   authors: Joel Hughes, Brendan Annulis, and Luke McGrath
 
@@ -34,6 +37,10 @@
 "CSA Project - Ryan Siglag Rohan Punj Zahed Kachhi.pdf":
   title: The Impact of Back-to-Backs on NBA Performances
   authors: Ryan Siglag, Rohan Punj, Zahed Kachhi
+
+"CSA Project - Shivan Jake Alex.pdf":
+  title: The Role of Build-Up Style in the Premier League
+  authors: Shivan Lakhanpal, Jake Gitner, and Xinwei Huang
 
 "CSA Project - Brendan Annulis.pdf":
   title: "Bust to Super Bowl Champion: What Causes the QB Career Resurgence?"
