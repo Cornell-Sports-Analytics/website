@@ -19,8 +19,8 @@ To show a proper title, authors, and a one-sentence summary, add an entry to `_d
 
 ## Update photos
 
-- Landing page photos: save pictures in `assets/images/team/`. They appear on the home page automatically, in file name order, and the first one is shown largest. Use descriptive file names such as `spring-2027-case-competition.jpg`, because the name is used as the photo's description for screen readers.
-- Until photos are added, the home page shows plain placeholder tiles.
+- Landing page photos: save pictures in `landing_images/`. They appear on the home page automatically, in file name order, and the first one is shown largest. Use descriptive file names such as `spring-2027-case-competition.jpg`, because the name is used as the photo's description for screen readers.
+- If no photos are present, the home page shows plain placeholder tiles.
 - Keep each photo under about 1 MB so the page loads quickly.
 
 ## Update the executive board

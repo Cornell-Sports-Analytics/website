@@ -36,8 +36,8 @@ description: Cornell Sports Analytics conducts independent research in small gro
 <section class="photos wrap" aria-label="Photos of the group">
   <div class="mosaic">
     {%- assign shown = 0 -%}
-    {%- assign team_files = site.static_files | where_exp: "f", "f.path contains '/assets/images/team/'" | sort_natural: "path" -%}
-    {%- for f in team_files -%}
+    {%- assign landing_images = site.static_files | where_exp: "f", "f.path contains '/landing_images/'" | sort_natural: "path" -%}
+    {%- for f in landing_images -%}
       {%- assign ext = f.extname | downcase -%}
       {%- if ext == ".jpg" or ext == ".jpeg" or ext == ".png" or ext == ".webp" -%}
         {%- assign shown = shown | plus: 1 -%}
