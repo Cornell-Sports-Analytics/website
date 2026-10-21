@@ -7,6 +7,7 @@
   class_standing: Senior
   favorite_team: Seattle Seahawks
   photo: luke.png
+  linkedin: https://www.linkedin.com/in/lukermcgrath/
 
 - name: Robin Dong
   role: Co-President
@@ -14,6 +15,7 @@
   class_standing: Junior
   favorite_team: Cleveland Cavaliers
   photo: robin.jpg
+  linkedin: https://www.linkedin.com/in/robindong/
 
 - name: Felix Huang
   role: Vice President
@@ -28,6 +30,7 @@
   class_standing: Sophomore
   favorite_team: New York Mets
   photo: charles.png
+  linkedin: https://www.linkedin.com/in/charles-aftel-7031312b8/
 
 - name: Evan Deutsch
   role: Outreach Coordinator
@@ -35,6 +38,7 @@
   class_standing: Sophomore
   favorite_team: New York Islanders
   photo: evan.png
+  linkedin: https://www.linkedin.com/in/evan-deutsch-77b41a415/
 
 - name: Sameer Nathawat
   role: Head of New Member Education
@@ -42,6 +46,7 @@
   class_standing: Sophomore
   favorite_team: Tennessee Volunteers
   photo: sameer.png
+  linkedin: https://www.linkedin.com/in/sameer-nathawat/
 
 - name: Jordan Weiss
   role: Secretary
@@ -49,6 +54,7 @@
   class_standing: Sophomore
   favorite_team: New York Knicks
   photo: jordan.png
+  linkedin: https://www.linkedin.com/in/jordan-weiss2/
 
 - name: Duncan Park
   role: Social Chair
@@ -56,3 +62,4 @@
   class_standing: Sophomore
   favorite_team: Buffalo Bills
   photo: duncan.png
+  linkedin: https://www.linkedin.com/in/duncan-park-785548282/
