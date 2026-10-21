@@ -10,30 +10,46 @@ description: Get in touch with Cornell Sports Analytics about joining, collabora
 </section>
 
 <section class="section wrap">
-  <dl class="contact-list">
+  <ul class="contact-list">
     {%- unless site.contact_email == blank %}
-    <div class="contact-row">
-      <dt>Email</dt>
-      <dd><a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a></dd>
-    </div>
+    <li class="contact-row">
+      <a class="contact-link" href="mailto:{{ site.contact_email }}">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm9 7.2L20.2 7H3.8L12 12.2Zm-9 4.9h18V9.1l-9 5.7-9-5.7v8Z"/>
+        </svg>
+        <span><strong>Email</strong><small>{{ site.contact_email }}</small></span>
+      </a>
+    </li>
     {%- endunless %}
     {%- unless site.social.instagram == blank %}
-    <div class="contact-row">
-      <dt>Instagram</dt>
-      <dd><a href="{{ site.social.instagram }}">{{ site.social.instagram | remove: "https://" | remove: "www." }}</a></dd>
-    </div>
+    <li class="contact-row">
+      <a class="contact-link" href="{{ site.social.instagram }}">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.5-3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+        </svg>
+        <span><strong>Instagram</strong><small>{{ site.social.instagram | remove: "https://" | remove: "www." }}</small></span>
+      </a>
+    </li>
     {%- endunless %}
     {%- unless site.social.linkedin == blank %}
-    <div class="contact-row">
-      <dt>LinkedIn</dt>
-      <dd><a href="{{ site.social.linkedin }}">{{ site.social.linkedin | remove: "https://" | remove: "www." }}</a></dd>
-    </div>
+    <li class="contact-row">
+      <a class="contact-link" href="{{ site.social.linkedin }}">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M5.2 3a2.2 2.2 0 1 1 0 4.4 2.2 2.2 0 0 1 0-4.4ZM3.3 9h3.8v12H3.3V9Zm6.2 0h3.6v1.6h.1A4 4 0 0 1 16.8 8c3.9 0 4.6 2.5 4.6 5.7V21h-3.8v-6.5c0-1.6 0-3.6-2.2-3.6s-2.5 1.7-2.5 3.5V21H9.5V9Z"/>
+        </svg>
+        <span><strong>LinkedIn</strong><small>{{ site.social.linkedin | remove: "https://" | remove: "www." }}</small></span>
+      </a>
+    </li>
     {%- endunless %}
     {%- unless site.social.github == blank %}
-    <div class="contact-row">
-      <dt>GitHub</dt>
-      <dd><a href="{{ site.social.github }}">{{ site.social.github | remove: "https://" | remove: "www." }}</a></dd>
-    </div>
+    <li class="contact-row">
+      <a class="contact-link" href="{{ site.social.github }}">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.18-3.37-1.18-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.35 1.08 2.92.82.09-.65.35-1.08.64-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.86v2.76c0 .26.18.57.69.48A10 10 0 0 0 12 2Z"/>
+        </svg>
+        <span><strong>GitHub</strong><small>{{ site.social.github | remove: "https://" | remove: "www." }}</small></span>
+      </a>
+    </li>
     {%- endunless %}
-  </dl>
+  </ul>
 </section>
