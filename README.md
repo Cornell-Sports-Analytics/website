@@ -88,7 +88,7 @@ Then open http://localhost:4000.
 | `index.html` | Landing page |
 | `about.html` | About us and executive board |
 | `projects.html` | Past projects page (builds itself from `projects/`) |
-| `contact.html` | Contact us |
+| `contact.html` | Contact Us |
 | `projects/<year>/` | Project PDFs |
 | `_data/` | Editable lists: navigation, executive board, project details |
 | `assets/` | Styles, photos, icon |
