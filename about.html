@@ -22,13 +22,18 @@ description: Who runs Cornell Sports Analytics, and what the group is about.
         {%- endif %}
       </div>
       <h3>{{ m.name }}</h3>
+      {%- if m.role %}
       <p class="member-role">{{ m.role }}</p>
-      {%- if m.major and m.class_year %}
-      <p class="member-detail">{{ m.major }}, class of {{ m.class_year }}</p>
+      {%- endif %}
+      {%- if m.major and m.class_standing %}
+      <p class="member-detail">{{ m.class_standing }}, {{ m.major }} Major</p>
       {%- elsif m.major %}
-      <p class="member-detail">{{ m.major }}</p>
-      {%- elsif m.class_year %}
-      <p class="member-detail">Class of {{ m.class_year }}</p>
+      <p class="member-detail">{{ m.major }} Major</p>
+      {%- elsif m.class_standing %}
+      <p class="member-detail">{{ m.class_standing }}</p>
+      {%- endif %}
+      {%- if m.favorite_team %}
+      <p class="member-detail">Favorite Team: {{ m.favorite_team }}</p>
       {%- endif %}
       {%- if m.bio %}
       <p class="member-bio">{{ m.bio }}</p>

@@ -1,38 +1,58 @@
-# Executive board, shown on the About us page in this order.
-# To add a person, copy one block below and edit it. To remove someone, delete their block.
-#
-# photo: file name of a picture saved in assets/images/eboard/ (for example "alex-kim.jpg").
-#        Leave it empty ("") to show the person's initials instead.
-# Every field except name and role is optional.
+# Executive board, shown on the About Us page in this order.
+# Photos are stored in assets/images/eboard/.
 
-- name: Firstname Lastname
-  role: President
-  major: Major
-  class_year: 2028
-  photo: ""
-  bio: "One or two sentences about this person and what they work on."
-  linkedin: ""
+- name: Luke McGrath
+  role: Co-President
+  major: ILR
+  class_standing: Senior
+  favorite_team: Seattle Seahawks
+  photo: luke.png
 
-- name: Firstname Lastname
-  role: Vice president
-  major: Major
-  class_year: 2028
-  photo: ""
-  bio: "One or two sentences about this person and what they work on."
-  linkedin: ""
+- name: Robin Dong
+  role: Co-President
+  major: Statistics
+  class_standing: Junior
+  favorite_team: Cleveland Cavaliers
+  photo: robin.jpg
 
-- name: Firstname Lastname
+- name: Felix Huang
+  role: Vice President
+  major: Statistics
+  class_standing: Junior
+  favorite_team: San Antonio Spurs
+  photo: felix.png
+
+- name: Charles Aftel
   role: Treasurer
-  major: Major
-  class_year: 2028
-  photo: ""
-  bio: "One or two sentences about this person and what they work on."
-  linkedin: ""
+  major: Hotel Administration
+  class_standing: Sophomore
+  favorite_team: New York Mets
+  photo: charles.png
 
-- name: Firstname Lastname
-  role: Head of projects
-  major: Major
-  class_year: 2028
-  photo: ""
-  bio: "One or two sentences about this person and what they work on."
-  linkedin: ""
+- name: Evan Deutsch
+  role: Outreach Coordinator
+  major: ILR
+  class_standing: Sophomore
+  favorite_team: New York Islanders
+  photo: evan.png
+
+- name: Sameer Nathawat
+  role: Head of New Member Education
+  major: Statistics
+  class_standing: Sophomore
+  favorite_team: Tennessee Volunteers
+  photo: sameer.png
+
+- name: Jordan Weiss
+  role: Secretary
+  major: Math and Philosophy
+  class_standing: Sophomore
+  favorite_team: New York Knicks
+  photo: jordan.png
+
+- name: Duncan Park
+  role: Social Chair
+  major: Math and Computer Science
+  class_standing: Sophomore
+  favorite_team: Buffalo Bills
+  photo: duncan.png
