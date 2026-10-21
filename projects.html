@@ -2,32 +2,32 @@
 layout: default
 title: Past Projects
 permalink: /projects/
-description: Every project Cornell Sports Analytics has completed, organized by year, with the full write-up as a PDF.
+description: Every project Cornell Sports Analytics has completed, organized by season and year, with the full write-up as a PDF.
 ---
 {%- comment -%}
-  This page builds itself from the PDFs saved in projects/<year>/.
+  This page builds itself from the PDFs saved in projects/<season and year>/.
   Nothing here needs editing when a project is added.
 {%- endcomment -%}
 {%- assign candidates = site.static_files | where_exp: "f", "f.path contains '/projects/'" | sort_natural: "path" -%}
-{%- assign years = "" | split: "," -%}
+{%- assign project_periods = "" | split: "," -%}
 {%- for f in candidates -%}
   {%- assign ext = f.extname | downcase -%}
   {%- assign parts = f.path | split: "/" -%}
   {%- if ext == ".pdf" and parts.size == 4 and parts[1] == "projects" -%}
-    {%- assign years = years | push: parts[2] -%}
+    {%- assign project_periods = project_periods | push: parts[2] -%}
   {%- endif -%}
 {%- endfor -%}
-{%- assign years = years | uniq | sort | reverse -%}
+{%- assign project_periods = project_periods | uniq | sort_natural | reverse -%}
 
 <section class="page-head wrap">
   <h1>Past Projects</h1>
   <p class="lede">Everything the group has finished, newest first. Each project links to its full write-up as a PDF.</p>
-  {%- if years.size > 1 %}
-  <nav class="year-nav" aria-label="Jump to a year">
+  {%- if project_periods.size > 1 %}
+  <nav class="year-nav" aria-label="Jump to a project period">
     <ul>
-      {%- for y in years %}
-      {%- assign year_id = y | slugify %}
-      <li><a href="#year-{{ year_id }}">{{ y }}</a></li>
+      {%- for project_period in project_periods %}
+      {%- assign period_id = project_period | slugify %}
+      <li><a href="#period-{{ period_id }}">{{ project_period }}</a></li>
       {%- endfor %}
     </ul>
   </nav>
@@ -35,18 +35,18 @@ description: Every project Cornell Sports Analytics has completed, organized by 
 </section>
 
 <div class="wrap archive">
-  {%- if years.size == 0 %}
+  {%- if project_periods.size == 0 %}
   <p class="empty">Our first projects will be posted here.</p>
   {%- endif %}
-  {%- for y in years %}
-  {%- assign year_id = y | slugify %}
-  <section class="year" id="year-{{ year_id }}" aria-labelledby="label-{{ year_id }}">
-    <h2 class="year-label" id="label-{{ year_id }}">{{ y }}</h2>
+  {%- for project_period in project_periods %}
+  {%- assign period_id = project_period | slugify %}
+  <section class="year" id="period-{{ period_id }}" aria-labelledby="label-{{ period_id }}">
+    <h2 class="year-label" id="label-{{ period_id }}">{{ project_period }}</h2>
     <ul class="entries">
       {%- for f in candidates -%}
         {%- assign ext = f.extname | downcase -%}
         {%- assign parts = f.path | split: "/" -%}
-        {%- if ext == ".pdf" and parts.size == 4 and parts[1] == "projects" and parts[2] == y -%}
+        {%- if ext == ".pdf" and parts.size == 4 and parts[1] == "projects" and parts[2] == project_period -%}
           {%- assign meta = site.data.projects[f.name] %}
       <li class="entry">
         <div class="entry-body">
