@@ -17,15 +17,32 @@ description: Every project Cornell Sports Analytics has completed, organized by 
     {%- assign project_periods = project_periods | push: parts[2] -%}
   {%- endif -%}
 {%- endfor -%}
-{%- assign project_periods = project_periods | uniq | sort_natural | reverse -%}
+{%- assign project_periods = project_periods | uniq -%}
+{%- assign ordered_periods = "" | split: "," -%}
+{%- for project_period in project_periods -%}
+  {%- assign period_parts = project_period | split: " " -%}
+  {%- assign season = period_parts[0] -%}
+  {%- assign year = period_parts[1] -%}
+  {%- assign season_order = "0" -%}
+  {%- case season -%}
+    {%- when "Winter" -%}{%- assign season_order = "1" -%}
+    {%- when "Spring" -%}{%- assign season_order = "2" -%}
+    {%- when "Summer" -%}{%- assign season_order = "3" -%}
+    {%- when "Fall" -%}{%- assign season_order = "4" -%}
+  {%- endcase -%}
+  {%- assign period_key = year | append: "-" | append: season_order | append: "|" | append: project_period -%}
+  {%- assign ordered_periods = ordered_periods | push: period_key -%}
+{%- endfor -%}
+{%- assign ordered_periods = ordered_periods | sort_natural | reverse -%}
 
 <section class="page-head wrap">
   <h1>Past Projects</h1>
   <p class="lede">Everything the group has finished, most recent semesters at the top. Each project links to its full presentation as a PDF. Feel free to reach out to the authors with any questions!</p>
-  {%- if project_periods.size > 1 %}
+  {%- if ordered_periods.size > 1 %}
   <nav class="year-nav" aria-label="Jump to a project period">
     <ul>
-      {%- for project_period in project_periods %}
+      {%- for period_key in ordered_periods %}
+      {%- assign project_period = period_key | split: "|" | last %}
       {%- assign period_id = project_period | slugify %}
       <li><a href="#period-{{ period_id }}">{{ project_period }}</a></li>
       {%- endfor %}
@@ -35,10 +52,11 @@ description: Every project Cornell Sports Analytics has completed, organized by 
 </section>
 
 <div class="wrap archive">
-  {%- if project_periods.size == 0 %}
+  {%- if ordered_periods.size == 0 %}
   <p class="empty">Our first projects will be posted here.</p>
   {%- endif %}
-  {%- for project_period in project_periods %}
+  {%- for period_key in ordered_periods %}
+  {%- assign project_period = period_key | split: "|" | last %}
   {%- assign period_id = project_period | slugify %}
   <section class="year" id="period-{{ period_id }}" aria-labelledby="label-{{ period_id }}">
     <h2 class="year-label" id="label-{{ period_id }}">{{ project_period }}</h2>
